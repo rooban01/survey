@@ -16,6 +16,7 @@ app.get('/auth/google',passport.authenticate('google', {
        req.logout();
        res.redirect('/');
  });
+ 
 
  app.get('/api/current_user',  (req, res) => {
    res.send(req.user);
